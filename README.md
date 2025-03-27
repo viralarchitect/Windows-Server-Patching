@@ -68,7 +68,7 @@ Run Start-Patching.ps1 in a PowerShell console.
 
 Enter the change number (e.g., "CHG12345").
 
-Enter the account name (e.g., "adminuser").
+Enter the account name (e.g., "ContosoCorp").
 
 Enter the server list (e.g., "server1,server2,server3" or a file path like "C:\servers.txt" containing one server per line).
 
