@@ -1,28 +1,28 @@
 # Windows Server Patching Script
 
-This is a robust PowerShell solution for patching Windows Servers. The script will take a list of IPs or hostnames, apply Windows updates asynchronously, report the status in a CSV file (including a user-provided change number and account name), prompt for reboots, display activity in separate PowerShell windows for each server, and handle errors gracefully. The solution consists of two scripts: a main script to orchestrate the process and a child script to handle updates on each server.
+This is a robust PowerShell solution for patching Windows Servers. The script will take a list of IPs or hostnames, apply Windows updates asynchronously, report the status in a CSV file (including a user-provided **change number** and **customer**/**client**/**account name**), prompt for reboots, display activity in separate PowerShell windows for each server, and handle errors gracefully. The solution consists of two scripts: a main script to orchestrate the process and a child script to handle updates on each server.
 
 ## Technical Requirements
 
 Based on your query, here are the detailed technical requirements for the PowerShell script:
 
-### 1. Input Handling:
+### 1. Input Handling
 
 Accept an arbitrary list of server IPs or hostnames, either as a comma-separated string or from a file path.
 
-### 2. Asynchronous Execution:
+### 2. Asynchronous Execution
 
 Apply updates on multiple servers simultaneously using separate PowerShell processes.
 
-### 3. Update Application:
+### 3. Update Application
 
 Install all available Windows updates on each server using the PSWindowsUpdate module.
 
-### 4. Reboot Prompt:
+### 4. Reboot Prompt
 
 Prompt the user in each server's PowerShell window before rebooting, allowing the user to confirm or skip the reboot.
 
-### 5. Status Reporting:
+### 5. Status Reporting
 
 1. Report the patch installation status for each server, including:
    - Server name
@@ -32,17 +32,17 @@ Prompt the user in each server's PowerShell window before rebooting, allowing th
    - Reboot requirement (Yes/No)
 2. Tie the status to a user-provided change number and account name, included as columns in the CSV output.
 
-### 6. Separate PowerShell Windows:
+### 6. Separate PowerShell Windows
 
 Open a new PowerShell window for each server to display its update activity.
 
-### 7. Error Handling:
+### 7. Error Handling
 
 Gracefully handle errors (e.g., unreachable servers, update failures) without stopping the script.
 
 Log errors in the status output and continue processing other servers.
 
-### 8. Logging and Output:
+### 8. Logging and Output
 
 Generate a CSV file consolidating the status of all servers, including the change record number and customer/client/account name.
 
