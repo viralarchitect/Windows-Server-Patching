@@ -25,11 +25,11 @@ Prompt the user in each server's PowerShell window before rebooting, allowing th
 ### 5. Status Reporting:
 
 1. Report the patch installation status for each server, including:
-   1. Server name
-   2. Status (e.g., Success, Partial Success, Error, No Updates)
-   3. Error message (if applicable)
-   4. List of installed updates
-   5. Reboot requirement (Yes/No)
+   - Server name
+   - Status (e.g., Success, Partial Success, Error, No Updates)
+   - Error message (if applicable)
+   - List of installed updates
+   - Reboot requirement (Yes/No)
 2. Tie the status to a user-provided change number and account name, included as columns in the CSV output.
 
 ### 6. Separate PowerShell Windows:
