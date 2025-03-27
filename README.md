@@ -1,6 +1,6 @@
 # Windows Server Patching Script
 
-This is a robust PowerShell solution for patching Windows Servers based on your requirements. The script will take a list of IPs or hostnames, apply Windows updates asynchronously, report the status in a CSV file (including a user-provided change number and account name), prompt for reboots, display activity in separate PowerShell windows for each server, and handle errors gracefully. The solution consists of two scripts: a main script to orchestrate the process and a child script to handle updates on each server.
+This is a robust PowerShell solution for patching Windows Servers. The script will take a list of IPs or hostnames, apply Windows updates asynchronously, report the status in a CSV file (including a user-provided change number and account name), prompt for reboots, display activity in separate PowerShell windows for each server, and handle errors gracefully. The solution consists of two scripts: a main script to orchestrate the process and a child script to handle updates on each server.
 
 ## Technical Requirements
 
@@ -44,7 +44,7 @@ Log errors in the status output and continue processing other servers.
 
 ### 8. Logging and Output:
 
-Generate a CSV file consolidating the status of all servers, including the change number and account name.
+Generate a CSV file consolidating the status of all servers, including the change record number and customer/client/account name.
 
 ## Main Script (Start-Patching.ps1)
 
@@ -56,13 +56,13 @@ This script handles the update process for a single server, including applying u
 
 ## How to Use the Scripts
 
-### Preparation:
+### Preparation
 
 Save the main script as Start-Patching.ps1 and the child script as UpdateServer.ps1 in the same directory.
 
 Ensure you have administrative privileges and that PowerShell remoting is enabled on all target servers (Enable-PSRemoting).
 
-### Execution:
+### Execution
 
 Run Start-Patching.ps1 in a PowerShell console.
 
@@ -72,13 +72,13 @@ Enter the account name (e.g., "adminuser").
 
 Enter the server list (e.g., "server1,server2,server3" or a file path like "C:\servers.txt" containing one server per line).
 
-### Monitoring:
+### Monitoring
 
 A new PowerShell window will open for each server, showing the update activity (logged to log_<server>.txt).
 
 If a reboot is required, the window will prompt you to press Enter to reboot or close the window to skip.
 
-### Completion:
+### Completion
 
 Once all update windows are closed, return to the main script window and press Enter.
 
